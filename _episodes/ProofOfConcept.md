@@ -90,3 +90,18 @@ plt.savefig("pulsar_plot.png", dpi=300, bbox_inches='tight')
 Which produces the following plot:
 
 ![Pulsar plot](../fig/pulsar_plot_all.png)
+
+This is a nice starting point as it is a reproducible script (if we run it again we will get the same result as long as we have `pulsars.csv`).
+If we are making this plot once for a paper or a presentation the only left to do is to put the script and csv file on GitHub so we always have access to it.
+
+One thing to discuss is why we used `pandas` and `astropy` instead of reading in the csv manually and converting the RA and Dec to degrees ourselves?
+One reason is that a best practice in python is to use existing libraries instead of writing your own code (don't recreate the wheel).
+This is because existing libraries have been tested and are more likely to be bug free (have already considered weird edge cases you don't have to).
+
+Another reason is that `pandas` has a lot of features that make it easy to work with data.
+If you instead used a list of lists to store all the values you can easily lose track of what each value represents as you add more values.
+With `pandas` you can name each column with their units and access the values by name instead of index.
+You can also put the column right into the plot (`ax.scatter(`) without having to convert it to a list first.
+There are also many other features to filter your data which we will go over briefly in and you can read more about in the [pandas documentation](https://pandas.pydata.org/docs/) or a previous [ADACS workshop](https://adacs-australia.github.io/HWSA-2022/04-BestPracticesInComputing/index.html).
+
+Now let us put our code on GitHub.
