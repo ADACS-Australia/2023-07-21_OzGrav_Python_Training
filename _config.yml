@@ -158,6 +158,7 @@ highlighter: rouge
 
 episode_order:
   - Setup
+  - Intro
   - BestPracticesInComputing
   - ProofOfConcept
   - VersionControl
