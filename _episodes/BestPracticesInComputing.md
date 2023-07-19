@@ -1,7 +1,7 @@
 ---
 title: "Best Practices In Scientific Computing"
 teaching: 20
-exercises: 
+exercises:
 questions:
 - "What does best practice mean?"
 - "What should I be doing?"
@@ -52,14 +52,16 @@ Here are some guiding principles that should be followed when planning or writin
 In this lesson we will focus on repetition, version control, testing, documentation, and repetition.
 To demonstrate the utility of these topics we'll be working on a common task - simulating a catalogue of stars.
 
-# Use case - simulating a sky catalogue
-The example project that we will be developing will simulate a catalogue of foreground stars in the direction of the Andromeda galaxy. The initial requirements are as follows:
+# Use case - creating a sky plot
+The example project we will create a plot based on the positions of sources based on an input file.
+The initial requirements are as follows:
 
-- Stars should have randomized sky positions around the Andromeda galaxy
-- Positions should fall within 1 degree of the central location
-- Each star should have a unique ID
-- The star ID and position should be saved in a csv file to be analyzed by other programs
+- Read in a CSV file containing source positions
+- Convert the source positions (RA and DEC) to degrees
+- Plot these sources on the sky
+- Save the image to a png file
 
 This program is intended to be used by the developer and their research group which includes people who are not proficient python programmers.
 It is intended that the software will grow in capability and complexity only as needed to support a current research project.
+The example script is likely much simpler than software you will develop but should give you an idea of the best practice.
 With this in mind we move to the first stage of our software project – the proof of concept.

@@ -916,5 +916,11 @@ Some futher things you may want to include in your documentation are:
 - tutorials to demonstrate some of the key features of your software (Jupyter notebooks are great here)
 
 
+If you would like some examples of how astronomy software is documentated you can check out:
+  - [AstroPy documentation](https://astropy.readthedocs.io/en/stable/) (an extreme example)
+  - [Aegean wiki](https://github.com/PaulHancock/Aegean/wiki) (a great example of how to use the GitHub wiki)
+  - [pulsar_spectra](https://pulsar-spectra.readthedocs.io/en/latest/) (a shameless plug of Nick Swainston's software)
+
+
 
 

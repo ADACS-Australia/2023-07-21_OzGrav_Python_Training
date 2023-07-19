@@ -75,3 +75,17 @@ Brief summary of change
 {: .language-markdown}
 
 It doesn't matter if your release description isn't perfect, it is more make a release.
+
+
+## Extra credit
+
+The [template repo](https://github.com/ADACS-Australia/python_project_template) has two more implemented functions.
+- `filter_by_name` which filters the DataFrame by source name
+- `filter_by_declination` which filters the DataFrame by a minimum and maximum declination
+
+Improve your version of the repository so that the `filter_and_plot` has arguments for using these new functions you have written.
+Create tests and documentation for these new functions then compare your implementation and the template repo.
+Which implementation do you think is best?
+Which is easier to use?
+Which software is easier to understand?
+Which tests are more robust?
