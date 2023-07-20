@@ -1,7 +1,7 @@
 ---
 title: "Documentation"
-teaching: 15
-exercises: 15
+teaching: 40
+exercises: 20
 questions:
 - "Why would I document my code?"
 - "How do I document my code?"
@@ -399,7 +399,7 @@ As such every docstring should contain at least a one line statement that shows 
 > >
 > > ~~~
 > > def molleweide_plot(df):
-> >     """Plots the pulsars in a Molleweide projection and saves as a png called pulsar_plot.png.
+> >     """Plots the sources in a Molleweide projection and saves as a png called pulsar_plot.png.
 > >     """
 > >     # Plot the pulsars
 > >     fig = plt.figure(figsize=(6, 4))
@@ -440,13 +440,12 @@ If the function modifies an input but does not return the modified version as an
 > >     Parameters
 > >     ----------
 > >     csv_path : str
-> >         Path to the CSV file containing the pulsar data.
-> >         If none provided will use the pulsar data included with the package.
+> >         Path to the CSV file containing the source data.
 > >
 > >     Returns
 > >     -------
 > >     df : pandas.DataFrame
-> >         Pandas DataFrame containing the pulsar data with RA and Dec in degrees.
+> >         Pandas DataFrame containing the source data with RA and Dec in degrees.
 > >     """
 > >     # Read the CSV file into a DataFrame
 > >     df = pd.read_csv(csv_path)
@@ -476,9 +475,9 @@ If the function modifies an input but does not return the modified version as an
 > >
 > > ~~~
 > > def molleweide_plot(df):
-> >     """Plots the pulsars in a Molleweide projection and saves as a png called pulsar_plot.png.
+> >     """Plots the source in a Molleweide projection and saves as a png called pulsar_plot.png.
 > >
-> >     Parameters
+> >     Parameters``
 > >     ----------
 > >     df : pandas.DataFrame
 > >         Pandas DataFrame containing the pulsar data with RA and Dec in degrees.
@@ -898,6 +897,10 @@ Will deploy the documentation to GitHub Pages.
 
 Git add, commmit, and push this file and you should see a GitHub Action start running.
 If it completes without errors there should be a new branch called `gh-pages` and a new webpage at `https://<your_username>.github.io/<your_repo_name>/`.
+
+If the action fails because you get an error like `fatal: Authentication failed` you may need to add write permissions to your actions.
+Go to your respository's `Setting` page, click `Actions`, `General` then under `Wokflow permissions` change it to `Read and write permissions`.
+
 If you don't already see the webpage you may have to turn it on in settings by pointing at the root directory on the `gh-pages`` branch.
 
 ![github_pages](../fig/GitHub_pages_settings.png)

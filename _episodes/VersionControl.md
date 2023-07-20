@@ -28,7 +28,7 @@ You can think of it as a recording of your progress: you can rewind to start at 
 ![Changes Are Saved Sequentially](https://github.com/swcarpentry/git-novice/raw/gh-pages/fig/play-changes.svg){: width="600"}
 
 Once you think of changes as separate from the document itself, you can then think about "playing back" different sets of changes on the base document, ultimately resulting in different versions of that document.
-For example, two users can make independent sets of changes on the same document. 
+For example, two users can make independent sets of changes on the same document.
 
 ![Different Versions Can be Saved](https://github.com/swcarpentry/git-novice/raw/gh-pages/fig/versions.svg){: width="600"}
 
@@ -43,12 +43,12 @@ Repositories can be kept in sync across different computers, facilitating collab
 
 > ## Paper Writing
 >
-> *   Imagine you drafted an excellent paragraph for a paper you are writing, but later ruin 
->     it. How would you retrieve the *excellent* version of your conclusion? Is it even possible?
+> *   Imagine you drafted an excellent paragraph for a paper you are writing, but later ruin
+>     it. How would you retrieve the *excellent* version of your paragraph? Is it even possible?
 >
-> *   Imagine you have 5 co-authors. How would you manage the changes and comments 
->     they make to your paper?  If you use LibreOffice Writer or Microsoft Word, what happens if 
->     you accept changes made using the `Track Changes` option? Do you have a 
+> *   Imagine you have 5 co-authors. How would you manage the changes and comments
+>     that they make to your paper?  If you use LibreOffice Writer or Microsoft Word, what happens if
+>     you accept changes made using the `Track Changes` option? Do you have a
 >     history of those changes?
 >
 > Share your thoughts and experience on the [etherpad]({{site.ether_pad}})
@@ -59,7 +59,7 @@ Repositories can be kept in sync across different computers, facilitating collab
 > >     of the old version of the paper. The danger of losing good versions
 > >     often leads to the problematic workflow illustrated in the PhD Comics
 > >     cartoon at the top of this page.
-> >     
+> >
 > > *   Collaborative writing with traditional word processors is cumbersome.
 > >     Either every collaborator has to work on a document sequentially
 > >     (slowing down the process of writing), or you have to send out a
@@ -83,7 +83,7 @@ Lets make a start on our project by keeping that first proof of concept script u
 > ## Start a new project
 > - Move into the root directory for our project
 > - Initialize a git repository in this directory by typing `git init`
-> - Tell git that you want to track your `README.md` and `sky_sim.py` files using `git add <filename>`
+> - Tell git that you want to track your `puslars.csv` and `proof_of_concept.py` files using `git add <filename>`
 > - Save your initial progress by creating a new commit to your repository via `git commit -m <message>`
 >   - The first commit message can be something simple like "initial version" or "proof of concept"
 > - Check that you have committed your progress by running `git log`
@@ -109,7 +109,7 @@ Having good commit messages will make it easier to tell which commit we should b
 > ## Small changes, often
 > It is good practice, where possible, to make many small commits rather than a few large commits.
 > This strategy will help you have a finer grained 'undo', and when you start branching and merging, it will result in fewer and smaller merge conflicts.
-> 
+>
 {: .callout}
 
 Now we have some first step that we can come back to later if we mess things up.

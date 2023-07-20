@@ -1,13 +1,18 @@
 ---
 title: "Python project"
-teaching: 15
-exercises: 15
+teaching: 40
+exercises: 20
 questions:
--
+- How do I make a python package?
+- What is the best way to setup a package?
+- Can I include data in my python package?
 objectives:
--
+- Create a python package
+- Make the package easy to install
 keypoints:
--
+- What an executable script is
+- What a python package and module is
+- How to include data in your package
 ---
 ## Parts of a python package
 
@@ -19,7 +24,7 @@ They are most useful for automating tasks that you do regularly.
 
 The python modules are python functions and classes that can be imported into other python scripts by appending them to the `$PYTHONPATH` environment variable.
 Python modules are usually longer (hundreds of lines of code) and are used to implement the core functionality of your package.
-They are useful to make new python scripts as they can be imported into other scripts.
+They are useful to make new python code as they can be imported into other scripts.
 Being able to only use parts of your code makes it more flexible and more useful for others.
 
 
@@ -114,7 +119,7 @@ setup(
     # Minimum version of python required
     python_requires='>=3.6',
     # Name of your package, should be the same as the name of the directory
-    packages=['my_package'],
+    packages=['my_package', 'my_package.scripts'],
     # Any data files that need to be included with the package (non python files)
     package_data={'my_package':['data/*.csv']},
     # Dependencies for the package
@@ -164,8 +169,10 @@ hello_world
 
 Congratulations you have made your first python package!
 
+Commit your changes!
 
-## Turning out initial script into a python package
+
+## Turning our initial script into a python package
 
 Now that we have understand the parts of a python package we will turn our initial script into a python package.
 We will split the main two tasks of out initial script into two functions, one that reads in the data and one that plots it, then create an executable scripts that calls these functions.
@@ -229,6 +236,7 @@ We can now create a new script called `my_package/scripts/filter_and_plot.py` th
 
 ```
 from my_package.data_processing import input_data
+from my_package.plotting import molleweide_plot
 
 
 def main():
@@ -276,6 +284,7 @@ filter_and_plot
 {: .language-bash}
 
 Huzzah! We now have an installable script that we can run from any directory and that we can share with others.
+Don't forget to commit your changes
 BUT, we are not quite done yet.
 
 ## Using an argument parser

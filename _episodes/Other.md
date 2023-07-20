@@ -3,11 +3,11 @@ title: "Other"
 teaching: 15
 exercises: 15
 questions:
--
+- What else can I do to improve my software?
 objectives:
--
+- Learn optional ways to improve your repository
 keypoints:
--
+- There are always more ways to improve your repository
 ---
 # Other
 

@@ -1,7 +1,7 @@
 ---
 title: "Proof of concept"
-teaching: 30
-exercises: 30
+teaching: 10
+exercises: 0
 questions:
 - "Where do we start?"
 objectives:

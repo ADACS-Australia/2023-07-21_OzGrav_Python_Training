@@ -1,7 +1,7 @@
 ---
 title: "Using GitHub"
-teaching: 15
-exercises: 15
+teaching: 10
+exercises: 10
 questions:
 - "Why use an online repo like GitHub or GitLab?"
 - "How do I create a new github repo?"
@@ -37,8 +37,8 @@ On a command line, git commands are written as `git verb options`, where `verb` 
 So here is how you can setup git for the first time on your computer:
 
 ~~~
-$ git config --global user.name "Paul Hancock"
-$ git config --global user.email "paul.hancock@curtin.edu.au"
+git config --global user.name "Paul Hancock"
+git config --global user.email "paul.hancock@curtin.edu.au"
 ~~~
 {: .language-bash}
 
@@ -81,9 +81,9 @@ As soon as the repository is created, GitHub displays a page with a URL and some
 This effectively does the following on GitHub's servers:
 
 ~~~
-$ mkdir symmetrical-octo-parakeet
-$ cd symmetrical-octo-parakeet
-$ git init
+mkdir symmetrical-octo-parakeet
+cd symmetrical-octo-parakeet
+git init
 ~~~
 {: .language-bash}
 
@@ -110,7 +110,7 @@ It could be called anything, but `origin` is a convention that is often used by 
 We can check that the command has worked by running `git remote -v`:
 
 ~~~
-$ git remote -v
+git remote -v
 ~~~
 {: .language-bash}
 
@@ -164,12 +164,12 @@ The file names are somethign like `id_rsa`/`id_rsa.pub` depending on how the key
 To create an SSH key pair Vlad uses this command, where the `-t` option specifies which type of algorithm to use and `-C` attaches a comment to the key (here, Vlad's email):
 
 ~~~
-$ ssh-keygen -t ed25519 -C "your_email@example.com"
+ssh-keygen -t ed25519 -C "your_email@example.com"
 ~~~
 {: .language-bash}
 
 If you are using a legacy system that doesn't support the Ed25519 algorithm, use:
-`$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
+`ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
 
 ~~~
 Generating public/private ed25519 key pair.
@@ -276,7 +276,7 @@ Now, you can add the title (eg. Laptop, or "ADACS workshop"), paste your SSH key
 
 Now that we’ve set that up, let’s check our authentication again from the command line.
 ~~~
-$ ssh -T git@github.com
+ssh -T git@github.com
 ~~~
 {: .language-bash}
 
@@ -293,7 +293,7 @@ Now that authentication is setup, we can return to the remote.
 This command will push the changes from our local repository to the repository on GitHub:
 
 ~~~
-$ git push origin main
+git push origin main
 ~~~
 {: .language-bash}
 

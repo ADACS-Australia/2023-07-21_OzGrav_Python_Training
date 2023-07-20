@@ -1,7 +1,7 @@
 ---
 title: "Best Practices In Scientific Computing"
-teaching: 20
-exercises:
+teaching: 15
+exercises: 5
 questions:
 - "What does best practice mean?"
 - "What should I be doing?"
