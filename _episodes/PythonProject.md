@@ -301,7 +301,7 @@ First we will add the following to the `my_package/scripts/filter_and_plot.py` s
 ```
 import argparse
 
-from my_package.data_processing import input_data, filter_by_name, filter_by_declination
+from my_package.data_processing import input_data #, filter_by_name, filter_by_declination
 from my_package.plotting import molleweide_plot
 
 
@@ -402,7 +402,7 @@ So for example we can set it as the default value for the input argument in the 
 ```
 import argparse
 
-from my_package.data_processing import input_data, filter_by_name, filter_by_declination
+from my_package.data_processing import input_data #, filter_by_name, filter_by_declination
 from my_package.plotting import molleweide_plot
 from my_package.load_data import PULSAR_CSV_PATH
 
