@@ -1,7 +1,7 @@
 ---
 title: "Introduction"
-teaching: 15
-exercises: 15
+teaching: 5
+exercises: 5
 questions:
 - "How can I prepare?"
 - "How will we be learning?"
@@ -12,7 +12,7 @@ keypoints:
 - "Everyone is here to learn and that means making mistakes"
 ---
 ## Acknowledgement of country
-We wish to acknowledge the custodians of the land we reside on. These lessons were developed on the lands of the Wadjuk (Perth region) people of the Nyoongar nation. This workshop will be delivered on the lands of the Bedegal people (UNSW campus), and we will be using computing resources that are on the lands of the Ngunnawal and Ngambri people (Canberra region).
+We wish to acknowledge the custodians of the land we reside on. These lessons were developed and delivered on the lands of the Wadjuk (Perth region) people of the Nyoongar nation.
 We pay our respect to their Elders and acknowledge their continuing culture and the contribution they make to the life of our cities and regions.
 
 
@@ -58,7 +58,7 @@ We ask that you follow these guidelines:
 - Critique ideas rather than individuals.
 - Do not engage in tech-shaming.
 
-See the [ASA2022 code of conduct](https://www.asa2022.org/code-of-conduct) and the [Software Carpentries code of conduct](https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html) for more information.
+See the [Software Carpentries code of conduct](https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html) for more information.
 
 
 

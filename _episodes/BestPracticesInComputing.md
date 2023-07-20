@@ -48,9 +48,65 @@ Here are some guiding principles that should be followed when planning or writin
 [^lessons]: Re-inventing the wheel can be a great learning experience, however when you are focusing on getting work done, it's most often not a good use of your time.
 [^xkcd]: Consider this handy chart from [xkcd](https://xkcd.com/1205/)
 
+> ## What is easier to read
+> The following if statements are all correct and will do the same thing but one is easier to read than the others.
+> Which one do you think that is?
+> > ## A
+> > ```
+> > if not foo == None:
+> >     # do thing
+> > else:
+> >     # don't do thing
+> > ```
+> > {: .language-python}
+> {: .checklist}
+> > ## B
+> > ```
+> > if not foo is None:
+> >     # do thing
+> > else:
+> >     # don't do thing
+> > ```
+> > {: .language-python}
+> {: .checklist}
+> > ## C
+> > ```
+> > if foo is not None:
+> >     # do thing
+> > else:
+> >     # don't do thing
+> > ```
+> > {: .language-python}
+> {: .checklist}
+> > ## D
+> > ```
+> > if foo is None:
+> >     # don't do thing
+> > else:
+> >     # do thing
+> > ```
+> > {: .language-python}
+> {: .checklist}
+>
+>
+> > ## easiest to read answer
+> > D is the easiest implementation to read with C as a close second.
+> > Both C and D can be read as a sentence so they're easier to comprehend.
+> > Since we have an else statement it easier to go with D to avoid the `not`, otherwise the reader may be trying to keep a double negative in their head to work out that the `else` means:
+> > ```
+> > if foo is not None:
+> >     # do thing
+> > if not (foo is not None):
+> >     # don't do thing
+> > ```
+> > {: .language-python}
+> {: .solution}
+>
+{: .challenge}
+
 
 In this lesson we will focus on repetition, version control, testing, documentation, and repetition.
-To demonstrate the utility of these topics we'll be working on a common task - simulating a catalogue of stars.
+To demonstrate the utility of these topics we'll be working on a common task - create a sky plot.
 
 # Use case - creating a sky plot
 The example project we will create a plot based on the positions of sources based on an input file.

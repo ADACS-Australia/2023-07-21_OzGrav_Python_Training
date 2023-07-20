@@ -211,10 +211,10 @@ Next we will create another module file called `my_package/plotting.py` that con
 We create a new module file for plotting as it is a different type of task to reading in the data and it is good practice to separate different tasks into different modules to keep your package organised.
 
 ```
-def mollewide_plot(df):
+def molleweide_plot(df):
     # Plot the pulsars
     fig = plt.figure(figsize=(6, 4))
-    # Mollewide projection gives us a nice view of the whole sky
+    # Molleweide projection gives us a nice view of the whole sky
     ax = plt.axes(projection='mollweide')
     plt.grid(True, color='gray', lw=0.5, linestyle='dotted')
     ax.set_xticklabels(['22h', '20h', '18h', '16h', '14h','12h','10h', '8h', '6h', '4h', '2h'])
@@ -236,7 +236,7 @@ def main():
     df = input_data("pulsars.csv")
 
     print("Plotting the data")
-    mollewide_plot(df)
+    molleweide_plot(df)
 
 
 if __name__ == "__main__":
@@ -290,7 +290,7 @@ First we will add the following to the `my_package/scripts/filter_and_plot.py` s
 import argparse
 
 from my_package.data_processing import input_data, filter_by_name, filter_by_declination
-from my_package.plotting import mollewide_plot
+from my_package.plotting import molleweide_plot
 
 
 def main():
@@ -318,7 +318,7 @@ def main():
     df = input_data(args.input)
 
     print("Plotting the data")
-    mollewide_plot(df)
+    molleweide_plot(df)
 
 if __name__ == "__main__":
     main()
@@ -391,7 +391,7 @@ So for example we can set it as the default value for the input argument in the 
 import argparse
 
 from my_package.data_processing import input_data, filter_by_name, filter_by_declination
-from my_package.plotting import mollewide_plot
+from my_package.plotting import molleweide_plot
 from my_package.load_data import PULSAR_CSV_PATH
 
 
