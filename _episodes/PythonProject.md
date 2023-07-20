@@ -218,6 +218,9 @@ Next we will create another module file called `my_package/plotting.py` that con
 We create a new module file for plotting as it is a different type of task to reading in the data and it is good practice to separate different tasks into different modules to keep your package organised.
 
 ```
+import matplotlib.pyplot as plt
+from numpy import radians
+
 def molleweide_plot(df):
     # Plot the pulsars
     fig = plt.figure(figsize=(6, 4))
