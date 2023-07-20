@@ -218,6 +218,9 @@ Next we will create another module file called `my_package/plotting.py` that con
 We create a new module file for plotting as it is a different type of task to reading in the data and it is good practice to separate different tasks into different modules to keep your package organised.
 
 ```
+import matplotlib.pyplot as plt
+from numpy import radians
+
 def molleweide_plot(df):
     # Plot the pulsars
     fig = plt.figure(figsize=(6, 4))
@@ -298,7 +301,7 @@ First we will add the following to the `my_package/scripts/filter_and_plot.py` s
 ```
 import argparse
 
-from my_package.data_processing import input_data, filter_by_name, filter_by_declination
+from my_package.data_processing import input_data #, filter_by_name, filter_by_declination
 from my_package.plotting import molleweide_plot
 
 
@@ -399,7 +402,7 @@ So for example we can set it as the default value for the input argument in the 
 ```
 import argparse
 
-from my_package.data_processing import input_data, filter_by_name, filter_by_declination
+from my_package.data_processing import input_data #, filter_by_name, filter_by_declination
 from my_package.plotting import molleweide_plot
 from my_package.load_data import PULSAR_CSV_PATH
 
