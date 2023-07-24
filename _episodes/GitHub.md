@@ -96,13 +96,15 @@ We do this by making the GitHub repository a `remote` for the local repository.
 
 The blank repo on GitHub shows us the command that we need to do this:
 ~~~
-git remote add origin git@github.com:PaulHancock/symmetrical-octo-parakeet.git
+git remote add origin https://github.com/PaulHancock/symmetrical-octo-parakeet.git
 git branch -M main
 git push -u origin main
 ~~~
 {: .language-bash}
 
 Make sure to use the URL for your repository rather than Paul's.
+If you haven't set up a SSH key yet, make sure the link starts with `https://` which you can change by pressing the HTTPS button.
+Also make sure that you have made your first commit before using the `git push` command.
 
 `origin` is a local name used to refer to the remote repository.
 It could be called anything, but `origin` is a convention that is often used by default in git and GitHub, so it's helpful to stick with this unless there's a reason not to.
@@ -218,7 +220,7 @@ The key's randomart image is:
 The "identification" is actually the private key.
 You should never share it.
 The public key is appropriately named.
-The "key fingerprint"  is a shorter version of a public key.
+The "key fingerprint" is a shorter version of a public key.
 
 Now that we have generated the SSH keys, we will find the SSH files when we check.
 
@@ -290,7 +292,15 @@ Good! This output confirms that the SSH key works as intended. We are now ready 
 ## 4. Push local changes to a remote
 
 Now that authentication is setup, we can return to the remote.
-This command will push the changes from our local repository to the repository on GitHub:
+We must update the remote link to use the ssh repository link instead of the https one.
+To do this go to your github repository click *code*, then *SSH* and you will be able to copy the ssh link (starts with `git@github.com`).
+Use this link to update your remote origin with the following command:
+
+```
+git remote set-url origin git@github.com:<username>/<repo>.git
+```
+
+You will now be able push the changes from our local repository to the repository on GitHub without entering your username and password:
 
 ~~~
 git push origin main
